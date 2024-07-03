@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>What does it do to Preston?</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        background-color: #f0f0f0;
+        margin: 0;
+        padding: 20px;
+      }
+      h1 {
+        color: #333;
+      }
+      .question {
+        margin: 20px 0;
+        font-size: 1.2em;
+      }
+      .options button {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        margin: 5px 0;
+        font-size: 1em;
+      }
+      .celebration {
+        display: none;
+        color: green;
+        font-weight: bold;
+      }
+      .game-over {
+        display: none;
+        color: red;
+        font-weight: bold;
+      }
+      .high-scores {
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>What does it do to Preston?</h1>
+    <div class="question" id="question"></div>
+    <div class="options" id="options"></div>
+    <div class="celebration" id="celebration">Correct! Well done!</div>
+    <div class="game-over" id="game-over">
+      Game Over! Enter your name:
+      <input type="text" id="player-name" />
+      <button onclick="submitScore()">Submit</button>
+    </div>
+    <div class="high-scores">
+      <h2>High Scores</h2>
+      <ul id="high-scores-list"></ul>
+    </div>
+
+    <script>
+      let questions = [];
+      let currentQuestionIndex = 0;
+      let score = 0;
+      let attempts = 0;
+      let highScores = JSON.parse(localStorage.getItem('highScores')) || [];
+
+      async function fetchQuestions() {
+        const response = await fetch('./data/questions.csv');
+        const data = await response.text();
+        questions = data
+          .trim()
+          .split('\n')
+          .slice(1)
+          .map((line) => {
+            const [question, correct, a, b, c, d] = line.split(',');
+            return { question, correct, options: { a, b, c, d } };
+          });
+        displayQuestion();
+      }
+
+      function getRandomOptions(correctOption) {
+        const otherOptions = questions
+          .flatMap((q) => Object.values(q.options))
+          .filter((option) => option !== correctOption);
+        const randomOptions = [];
+        while (randomOptions.length < 3) {
+          const randomOption =
+            otherOptions[Math.floor(Math.random() * otherOptions.length)];
+          if (!randomOptions.includes(randomOption)) {
+            randomOptions.push(randomOption);
+          }
+        }
+        return randomOptions;
+      }
+
+      function displayQuestion() {
+        const questionElement = document.getElementById('question');
+        const optionsElement = document.getElementById('options');
+        const celebrationElement = document.getElementById('celebration');
+        const gameOverElement = document.getElementById('game-over');
+
+        if (currentQuestionIndex >= questions.length) {
+          currentQuestionIndex = 0;
+        }
+
+        const currentQuestion = questions;
+      }
+    </script>
+  </body>
+</html>
