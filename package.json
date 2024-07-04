@@ -1,0 +1,24 @@
+{
+  "name": "net.clemans.project.wdidtp",
+  "version": "1.0.0",
+  "description": "What does it do to Preston?",
+  "main": "bin/index.js",
+  "scripts": {
+    "start": "npx http-server -p 8000",
+    "start-2": "npx browser-sync start --server --files 'assets/css/*.css, assets/js/*.js, index.html'",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/clemans/net.clemans.Project.WDIDTP.git"
+  },
+  "author": "Brooks C. Clemans",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/clemans/net.clemans.Project.WDIDTP/issues"
+  },
+  "homepage": "https://github.com/clemans/net.clemans.Project.WDIDTP#readme",
+  "devDependencies": {
+    "browser-sync": "^3.0.2"
+  }
+}
