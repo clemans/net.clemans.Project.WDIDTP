@@ -1,24 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>What does it do to Preston?</title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSV Quiz</title>
     <link rel="stylesheet" href="assets/css/styles.css">
-  </head>
-  <body>
-    <h1>What does it do to Preston?</h1>
-    <div class="question" id="question"></div>
-    <div class="options" id="options"></div>
-    <div class="celebration" id="celebration">Correct! Well done!</div>
-    <div class="game-over" id="game-over">
-      Game Over! Enter your name:
-      <input type="text" id="player-name" />
-      <button onclick="submitScore()">Submit</button>
-    </div>
-    <div class="high-scores">
-      <h2>High Scores</h2>
-      <ul id="high-scores-list"></ul>
-    </div>
-  </body>
+</head>
+<body>
+    <h1>Quiz</h1>
+    <div id="quiz-container"></div>
+    <div id="result"></div>
+    <script src="assets/js/quiz.js"></script>
+</body>
 </html>

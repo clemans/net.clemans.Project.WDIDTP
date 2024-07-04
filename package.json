@@ -4,8 +4,7 @@
   "description": "What does it do to Preston?",
   "main": "bin/index.js",
   "scripts": {
-    "start": "npx http-server -p 8000",
-    "start-2": "npx browser-sync start --server --files 'assets/css/*.css, assets/js/*.js, index.html'",
+    "start": "npx browser-sync start --server --files 'assets/css/*.css, assets/js/*.js, index.html'",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
