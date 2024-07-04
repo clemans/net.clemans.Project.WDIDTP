@@ -1,0 +1,34 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-color: #f0f0f0;
+  margin: 0;
+  padding: 20px;
+}
+h1 {
+  color: #333;
+}
+.question {
+  margin: 20px 0;
+  font-size: 1.2em;
+}
+.options button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+  font-size: 1em;
+}
+.celebration {
+  display: none;
+  color: green;
+  font-weight: bold;
+}
+.game-over {
+  display: none;
+  color: red;
+  font-weight: bold;
+}
+.high-scores {
+  margin-top: 20px;
+}
