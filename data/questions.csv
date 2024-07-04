@@ -1,2 +1,2 @@
-question, correct, a, b, c, d
-TestQuestion,alpha,alpha,bravo,charlie,delta
+Question,CorrectAnswer,OptionA,OptionB,OptionC,OptionD
+TestQuestion,Alpha,Alpha,Bravo,Charlie,Delta
