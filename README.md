@@ -7,15 +7,14 @@
 
 1. Download project and run web server:
 
-  ```bash
-  # Clone the project
-  git clone https://github.com/clemans/net.clemans/Project/WDIDTP.git
+  `git clone https://github.com/clemans/net.clemans/Project/WDIDTP.git`
 
-  # Install project dependencies
-  npm install
+2. Install project dependencies:
 
-  # Run the web server
-  npm run start
-  ```
+ `npm install`
 
-2. Browse to: <http://localhost:3000>
+3.  Run the web server:
+  
+ ` npm run start`
+
+4. Browse to: <http://localhost:3000>
