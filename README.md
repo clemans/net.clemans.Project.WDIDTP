@@ -7,7 +7,7 @@
 
 1. Download project and run web server:
 
-  `git clone https://github.com/clemans/net.clemans/Project/WDIDTP.git`
+  `git clone https://github.com/clemans/net.clemans/Project.WDIDTP.git`
 
 2. Install project dependencies:
 
