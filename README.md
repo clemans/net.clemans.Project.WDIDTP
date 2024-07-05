@@ -9,12 +9,16 @@
 
   `git clone https://github.com/clemans/net.clemans.Project.WDIDTP.git`
 
-2. Install project dependencies:
+2. Change directory into the project:
 
- `npm install`
+  `cd net.clemans.Project.WDIDTP`
 
-3.  Run the web server:
+3. Install project dependencies:
+
+  `npm install`
+
+4.  Run the web server:
   
- ` npm run start`
+  `npm run start`
 
-4. Browse to: <http://localhost:3000>
+5. Browse to: <http://localhost:3000>
